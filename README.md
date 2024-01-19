@@ -16,7 +16,10 @@ The purpose of this project is to explore the effectiveness of transfer learning
 - **MobileNetV2**: A lightweight deep neural network known for its efficiency on mobile devices.
 - **InceptionV3**: A more complex architecture that is known for its high accuracy in image classification tasks.
 
-## Data Augmentation
+## Data
+Large part of the image data used in this project were manually collected (photographed with an iPhone 11 Promax) and the rest were downloaded from Google.
+
+## Data Augmentation 
 
 Data augmentation involves applying a series of random transformations to the training images, thereby increasing the diversity of the training data without actually collecting new data. This technique helps to reduce overfitting and improve the model's generalization capabilities.
 
@@ -54,4 +57,4 @@ If you have any questions or would like to connect, reach out to me on [LinkedIn
 ## Acknowledgements
 
 - Special thanks to all the contributors of the TensorFlow and Keras libraries for making machine learning more accessible.
-- Large part of the data used in this project were manually collected and the rest were downloaded from Google.
+- Google
