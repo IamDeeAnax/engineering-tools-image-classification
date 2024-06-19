@@ -83,15 +83,17 @@ try:
             img_array = np.expand_dims(img_array, axis=0)
             img_array /= 255.0
 
-            # Predict the class of the image
+             # Predict the class of the image
             prediction = model.predict(img_array)
-            predicted_class = np.argmax(prediction, axis=-1)
+            confidence_scores = tf.nn.softmax(prediction[0])
+            max_confidence = np.max(confidence_scores)
+            predicted_class = np.argmax(confidence_scores)
 
             # Define the class names based on your model's training
             class_names = ['chisel', 'hammer', 'level', 'measuring_tape', 'plier', 'saw', 'screw_driver', 'wrench']
 
             # Set a confidence threshold
-            confidence_threshold = 0.6
+            confidence_threshold = 0.7
 
             # Display the prediction with a confidence check
             if max_confidence > confidence_threshold:
