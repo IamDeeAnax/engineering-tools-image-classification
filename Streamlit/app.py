@@ -12,7 +12,7 @@ def load_model_with_custom_objects(model_path):
 
 # Load the best model
 try:
-    model = load_model_with_custom_objects('model/engineering_tools_image_classification_model.keras')
+    model = load_model_with_custom_objects('Streamlit/model/engineering_tools_image_classification_model.keras')
     st.title('Engineering Tools Image Classification')
 
     # Determine the input shape of the model
