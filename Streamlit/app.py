@@ -39,6 +39,14 @@ try:
             color: red;  /* Error message color */
         }}
 
+        .heading {{
+        color: black;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+
+        }}
+
         </style>
         """,
         unsafe_allow_html=True
