@@ -90,12 +90,17 @@ try:
             # Define the class names based on your model's training
             class_names = ['chisel', 'hammer', 'level', 'measuring_tape', 'plier', 'saw', 'screw_driver', 'wrench']
 
-            # Display the prediction
-            st.write(f"The image is classified as: {class_names[predicted_class[0]]}")
+            # Set a confidence threshold
+            confidence_threshold = 0.6
+
+            # Display the prediction with a confidence check
+            if max_confidence > confidence_threshold:
+                st.write(f"The image is classified as: {class_names[predicted_class]} with confidence {max_confidence:.2f}")
+            else:
+                st.write("The model is not confident enough to classify this image as any known category.")
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
     else:
         st.write("Please upload an image to get started.")
 except Exception as e:
     st.error(f"An error occurred while loading the model: {e}")
-
