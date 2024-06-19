@@ -14,7 +14,7 @@ def load_model_with_custom_objects(model_path):
 # Load the best model
 try:
     model = load_model_with_custom_objects('Streamlit/model/engineering_tools_image_classification_model.keras')
-    background_image_path = 'assets/background.png'
+    background_image_path = 'Streamlit/assets/background.png'
     
     def add_bg_from_local(image_file):
         with open(image_file, "rb") as image_file:
